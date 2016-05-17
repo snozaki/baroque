@@ -1,6 +1,7 @@
 class TimelineController < ApplicationController
 
   before_action :check_Sign_in
+
   def index
   end
 
