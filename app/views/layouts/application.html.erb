@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Baroque</title>
+  <title>BAROQUE SNS</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <% if user_signed_in? %>
+    <header class="header">
+      <ul class="nav pull-right nav-pills">
+        <li class="text-white">
+          <%= link_to 'サインイン', "/users/sign_in", method: :get, :class => 'li_designs' %>
+        </li>
+        <li>
+          <%= link_to 'サインアウト', "/users/sign_out", method: :delete, :class => 'li_designs' %>
+        </li>
+      </ul>
+    </header><!-- /header -->
+  <% end %>
 
 <%= yield %>
 
