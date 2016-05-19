@@ -9,7 +9,20 @@
 <body>
   <% if user_signed_in? %>
     <header class="header">
-      <ul class="nav pull-right nav-pills">
+      <b><a href="/timeline" style="text-decoration:none" class="logo">BAROQUE SNS</a></b>
+<!--       <a href="http://master.tech-camp.in/" style="color:#ffffff;text-decoration: none;" class="user_info">
+        <img src="<%= @user.avatar %>" alt=""  class="header_image"> <%= @user.name %>
+        </a>
+ -->
+      <ul class="nav pull-right nav-pills user_info">
+        <li class="text-white image_li">
+          <img src="<%= @user.avatar %>" alt=""  class="header_image img-circle">
+        </li>
+        <li>
+          <a href="" style="color:#ffffff;text-decoration: none;">
+          <%= @user.name %> （<%= @user.department %>）
+          </a>
+        </li>
         <li class="text-white">
           <%= link_to 'サインイン', "/users/sign_in", method: :get, :class => 'li_designs' %>
         </li>

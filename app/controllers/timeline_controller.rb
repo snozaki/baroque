@@ -3,6 +3,8 @@ class TimelineController < ApplicationController
   before_action :check_Sign_in
 
   def index
+    @user = User.find(current_user.id)
+    #binding.pry
   end
 
   def check_Sign_in

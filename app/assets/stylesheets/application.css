@@ -12,19 +12,62 @@
  *= require_tree .
  */
 
+@font-face {
+  font-family: 'ecoico';
+  src:url('../fonts/timelineicons/ecoico.eot');
+  src:url('../fonts/timelineicons/ecoico.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/timelineicons/ecoico.woff') format('woff'),
+    url('../fonts/timelineicons/ecoico.ttf') format('truetype'),
+    url('../fonts/timelineicons/ecoico.svg#ecoico') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  } /* Made with http://icomoon.io/ */
+
+
 /* ヘッダーの設定 */
 .header{
-  height:40px;
-  background-color: #6666FF;
+  /*font-family: 'ecoico'*/
+  height:50px;
+  background-color: #6cbfee;
+  min-width: 620px;
 }
 
 .li_designs{
   color: white;
 }
 
+.logo{
+  font-family: "ecoico";
+  float: left;
+  color: white;
+  font-size: 20px;
+  position: relative;
+  left:2%;
+  top:20%;
+}
+
+.user_info{
+  margin-top:5px;
+  font-family: "ecoico";
+}
+
+.image_li{
+  margin-top:5px;
+}
+
+.header_image{
+  height: 30px;
+  width: 30px;
+  margin: 0;
+}
+
+.user_name{
+
+}
+
 /* ログイン画面の設定 */
 .wrapper {
-  background-color: #b0c4de;
+  background-color: #6cbfee;
   /*position: relative;*/
   height: 100vh; /*IE8以下では使えないので注意*/
   width: 100%;
@@ -71,3 +114,5 @@ input[type="text"] {
   background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
   background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
 }
+
+
