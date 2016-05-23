@@ -1,28 +1,60 @@
-<div class="timeline">
-  <div class="left_box">
-  <h2>グループおおお</h2>
-    <a href="/timeline" style="color:#4169e1;text-decoration:none" class="group">タイムライン（全社）
-    </a><br><br><br>
 
-    <div class="sheltter">
-      <h4>シェルター売れ筋ランキング</h4>
-      <a href="http://www.ec-store.net/allshopping/shopping_detail.cfm?product_common_id=124191&color_id=87" target="_blank">
-      <img class="image" src="http://www3.sheltter.vc/itemimages/124191/87_2_1_1.jpg" alt="">
-      </a>
-      <p>商品タイトル</p>
+<div class="timeline">
+
+  <div class="left_frame">
+  </div>
+
+  <div class="left_box">
+    <div class="logo_box">
+      <img src="/assets/baroque.png" class="img-responsive" style="margin-top: 5px;">
     </div>
+
+    <ul class="nav nav-list">
+<!--       <li class="active">
+      <h5>タイムライン</h5>
+      </li> -->
+      <li><a href="" class="glyphicon glyphicon-book"> タイムライン（全社）</a></li>
+      <li><i class="icon-stop"></i><a href="#tab2" data-toggle="tab">MENU2</a></li>
+      <li><i class="icon-tags"></i><a href="#tab2" data-toggle="tab">MENU3</a></li>
+      <li><i class="icon-heart"></i><a href="#tab2" data-toggle="tab">MENU4</a></li>
+      <li><i class="icon-align-center"></i><a href="#tab2" data-toggle="tab">MENU5</a></li>
+      <li><i class="icon-cog"></i><a href="#tab2" data-toggle="tab">MENU6</a></li>
+    </ul>
   </div>
 
   <div class="main_box">
-    <ul class="cbp_tmtimeline">
-      <li>
-        <time class="cbp_tmtime" datetime="2013-04-10 18:30"><span>4/10/13</span> <span>18:30</span></time>
-        <div class="cbp_tmicon cbp_tmicon-phone"></div>
-        <div class="cbp_tmlabel">
-          <h2>あいうえお</h2>
-          <p>Winter purslane...</p>
+    <div class="input_form">
+      <%= form_for (@article) do |f| %>
+        <div>
+          <%= f.text_area :title, placeholder: '投稿のタイトルを入力', style: 'width: 100%;height: 30px;resize: none' %>
         </div>
-      </li>
+        <div>
+          <%= f.text_area :text, placeholder: 'みんなで共有したい情報を投稿', style: 'width: 100%;height: 80px;' %>
+        </div>
+        <div>
+          <%= f.file_field :image %>
+        </div>
+        <div class="col10 push1">
+          <%= button_tag type: "submit", class: "btn btn-primary submit_btn" do %>
+          投稿する<% end %>
+        </div>
+      <% end %>
+    </div>
+    <ul class="cbp_tmtimeline">
+      <% @articles.each do |article| %>
+        <li>
+          <time class="cbp_tmtime" datetime=""><span><%= article.created_at.strftime("%Y/%m/%d") %></span> <span><%= article.created_at.strftime("%H:%M") %></span></time>
+          <div class="cbp_tmicon" style="background-image:url('<%= article.user.avatar %>'); background-size: cover;"></div>
+          <div class="cbp_tmlabel t_textbox">
+            <h2><%= article.title %></h2>
+            <p><%= article.text %></p>
+            <% article.images.each do |i| %>
+              <img src="<%= i.image %>" class="t_image">
+            <% end %>
+          </div>
+        </li>
+        <!-- <textarea class="cbp_tmlabel t_textbox" name="example" rows="1"></textarea> -->
+      <% end %>
       <li>
         <time class="cbp_tmtime" datetime="2013-04-11T12:04"><span>4/11/13</span> <span>12:04</span></time>
         <div class="cbp_tmicon cbp_tmicon-screen"></div>
@@ -60,5 +92,8 @@
 
   <div class="box3">
   box3
+  </div>
+
+  <div class="right_frame">
   </div>
 </div>

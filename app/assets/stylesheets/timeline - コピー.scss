@@ -20,46 +20,51 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   font-family: "ecoico";
   display: table;
 
-  .left_frame{
-    display: table-cell;
-    background-color: #f0f8ff;
-    width: 5%
-  }
-
   .left_box{
     // float:left;
-    width:15%;
+    width:20%;
     height: 100%;
-    background: #ffffff;
+    background: white;
     display: table-cell;
     border-right: 5px solid #afdcf8;
 
-    .logo_box{
-      min-height: 50px;
-      padding: 0;
-      width: 100%;
-      margin-top: 55px;
-    }
-
     .sidebar-nav {
+      height: 100%;
+      list-style: none;
+      margin: 0;
+      margin-bottom: auto;
+      padding: 0;
+      padding-left: 20px;
+
+        .sidebar-brand {
+          height: 65px;
+          line-height: 60px;
+          font-size: 18px;
+          font-family: "ecoico";
+        }
     }
 
-    .nav li {
+    #page-content-wrapper {
+      width: 100%;
+    }
+
+    .sidebar-nav li {
       line-height: 40px;
       text-indent: 20px;
-      // height: 100%;
-      a{
-        color: #696969;
-        display: block;
-        text-decoration: none;
-      }
-      a:hover {
-            color: #ffffff;
-            background: rgba(255,255,255,0.2);
-            background-color: #afdcf8;
-            font-weight: bold;
-            text-decoration: none;
-      }
+    }
+
+    .sidebar-nav li a {
+      color: #2f4f4f;
+      display: block;
+      text-decoration: none;
+    }
+
+    .sidebar-nav li a:hover {
+      color: #ffffff;
+      background: rgba(255,255,255,0.2);
+      background-color: #afdcf8;
+      font-weight: bold;
+      text-decoration: none;
     }
 
     .sidebar-nav li a:active,
@@ -67,30 +72,31 @@ table, caption, tbody, tfoot, thead, tr, th, td {
       text-decoration: none;
     }
 
-    #page-content-wrapper {
-      width: 100%;
+    .sidebar-nav > .sidebar-brand a {
+      color: #999999;
     }
+
+    // .sidebar-nav > .sidebar-brand a:hover {
+    //   color: red  ;
+    //   // background: none;
+    // }
 
   } /* end of left_box */
 
   .main_box{
     display: table-cell;
-    vertical-align: top;
+    width:50%;
     padding-left: 50px;
-
-    .input_form{
-      margin-top: 55px;
-    }
+    margin-top: 100px;
 
       .submit_btn{
       position: relative;
-      left: 43.5%;
+      left: 49.5%;
 
       }
 
       .t_textbox{
         min-width: 400px;
-        padding-right: 10px;
       }
 
       .t_image{
@@ -99,7 +105,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
       .cbp_tmtimeline {
         margin: 30px 0 0 0;
-        padding-right: 10px;
+        padding: 0;
         list-style: none;
         position: relative;
 
@@ -288,15 +294,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
   .box3{
     display:table-cell;
-    width:15%;
-    padding-right:80px;
-    background-color: #ffffff;
-  }
-
-  .right_frame{
-    display: table-cell;
-    width: 5%;
-    background-color:#f0f8ff;
+    width:20%
   }
 }
 

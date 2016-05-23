@@ -9,25 +9,22 @@
 <body>
   <% if user_signed_in? %>
     <header class="header">
-      <b><a href="/timeline" style="text-decoration:none" class="logo">BAROQUE SNS</a></b>
+      <b><a href="/timeline" style="text-decoration:none" class="logo glyphicon glyphicon-home"> ホーム</a></b>
 <!--       <a href="http://master.tech-camp.in/" style="color:#ffffff;text-decoration: none;" class="user_info">
         <img src="<%= @user.avatar %>" alt=""  class="header_image"> <%= @user.name %>
         </a>
  -->
       <ul class="nav pull-right nav-pills user_info">
-        <li class="text-white image_li">
-          <img src="<%= @user.avatar %>" alt=""  class="header_image img-circle">
+        <li class="text-white">
+          <img src="<%= @user.avatar %>" alt=""  class="header_image img-circle image_li">
         </li>
         <li>
           <a href="" style="color:#ffffff;text-decoration: none;">
           <%= @user.name %> （<%= @user.department %>）
           </a>
         </li>
-        <li class="text-white">
-          <%= link_to 'サインイン', "/users/sign_in", method: :get, :class => 'li_designs' %>
-        </li>
         <li>
-          <%= link_to 'サインアウト', "/users/sign_out", method: :delete, :class => 'li_designs' %>
+          <%= link_to 'サインアウト', "/users/sign_out", method: :delete %>
         </li>
       </ul>
     </header><!-- /header -->

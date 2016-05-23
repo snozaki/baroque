@@ -27,38 +27,49 @@
 /* ヘッダーの設定 */
 .header{
   /*font-family: 'ecoico'*/
-  height:50px;
+  height:38px;
   background-color: #6cbfee;
   min-width: 620px;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
 }
 
 .li_designs{
   color: white;
+  margin-top:1px;
 }
 
 .logo{
   font-family: "ecoico";
   float: left;
   color: white;
-  font-size: 20px;
+  font-size: 14px;
   position: relative;
-  left:2%;
-  top:20%;
+  left:6%;
+  padding-top: 10px;
 }
 
 .user_info{
-  margin-top:5px;
   font-family: "ecoico";
 }
 
-.image_li{
-  margin-top:5px;
+.user_info,.image_li{
+  margin-top:4px;
 }
+
+.user_info,.li a{
+  color: white;
+}
+
+.user_info,.li,a{
+  margin-top:0px;
+}
+
 
 .header_image{
   height: 30px;
   width: 30px;
-  margin: 0;
 }
 
 .user_name{

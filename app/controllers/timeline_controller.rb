@@ -4,6 +4,10 @@ class TimelineController < ApplicationController
 
   def index
     @user = User.find(current_user.id)
+    @articles = Article.includes(:images).order("created_at DESC")
+    @image = Image.all
+    #binding.pry
+    @article = Article.new #新規投稿用インスタンス
     #binding.pry
   end
 
